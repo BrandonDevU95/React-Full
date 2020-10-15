@@ -1,10 +1,6 @@
 import React from 'react';
+import { AppRouter } from './AppRouter';
 
 export const MainApp = () => {
-	return (
-		<div>
-			<h1>HomeScreen</h1>
-			<hr />
-		</div>
-	);
+	return <AppRouter />;
 };
