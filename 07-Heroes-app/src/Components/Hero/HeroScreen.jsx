@@ -1,18 +1,16 @@
+import { useMemo } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { getHeroById } from "../../Selectors/getHeroesById";
 
 export const HeroScreen = () => {
-   const { heroeId } = useParams();
    const navigate = useNavigate();
-
-   const hero = getHeroById(heroeId);
-
+   const { heroeId } = useParams();
+   const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
    const { id, superhero, alter_ego, characters, first_appearance, publisher } =
       hero;
+   const imagePath = `/assets/${id}.jpg`;
 
    if (!hero) return <Navigate to="/" />;
-
-   const imagePath = `/assets/${id}.jpg`;
 
    const handleReturn = () => {
       //Regresa a la pantalla anterior
