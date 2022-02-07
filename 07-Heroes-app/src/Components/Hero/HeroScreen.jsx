@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { getHeroById } from "../../Selectors/getHeroesById";
+import { heroImage } from "../../Helpers/heroImages";
 
 export const HeroScreen = () => {
    const navigate = useNavigate();
@@ -8,7 +9,6 @@ export const HeroScreen = () => {
    const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
    const { id, superhero, alter_ego, characters, first_appearance, publisher } =
       hero;
-   const imagePath = `/assets/${id}.jpg`;
 
    if (!hero) return <Navigate to="/" />;
 
@@ -21,7 +21,7 @@ export const HeroScreen = () => {
       <div className="row mt-5">
          <div className="col-4">
             <img
-               src={imagePath}
+               src={heroImage(`./${id}.jpg`)}
                alt={superhero}
                className="img-thumbnail animate__animated animate__fadeInLeft"
             />
