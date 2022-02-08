@@ -1,0 +1,39 @@
+.journal__main-content {
+   display: flex;
+}
+
+.journal__sidebar {
+   background-color: $dark-grey;
+   color: $white;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   padding-left: 10px;
+   padding-right: 10px;
+   width: 450px;
+}
+
+.journal__sidebar-navbar {
+   display: flex;
+   justify-content: space-between;
+}
+
+.journal__sidebar-navbar h3 {
+   font-weight: lighter;
+}
+
+.journal__new-entry {
+   display: flex;
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+   width: 100%;
+   flex-direction: column;
+
+   transition: color 0.3s ease;
+
+   &:hover {
+      background-color: darken($color: $white, $amount: 20);
+   }
+}
