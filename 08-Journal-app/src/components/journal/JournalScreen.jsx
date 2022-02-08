@@ -1,3 +1,4 @@
+import { NothigSelected } from "./NothigSelected";
 import { Sidebar } from "./Sidebar";
 
 export const JournalScreen = () => {
@@ -5,7 +6,7 @@ export const JournalScreen = () => {
       <div className="journal__main-content">
          <Sidebar />
          <main>
-            <h1>Main Contenct</h1>
+            <NothigSelected />
          </main>
       </div>
    );
