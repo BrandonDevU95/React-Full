@@ -31,7 +31,7 @@
    width: 100%;
    flex-direction: column;
 
-   transition: color 0.3s ease;
+   transition: color 0.3s ease-in-out;
 
    &:hover {
       background-color: darken($color: $white, $amount: 20);

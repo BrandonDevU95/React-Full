@@ -1,0 +1,14 @@
+.notes__main-content {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+.notes__appbar {
+   display: flex;
+   align-items: center;
+   background-color: $primary;
+   color: $white;
+   justify-content: space-between;
+   padding: 10px 20px;
+}
